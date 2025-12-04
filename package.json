@@ -1,0 +1,31 @@
+{
+  "name": "musicapp",
+  "version": "1.0.0",
+  "description": "An app to listen to music without ads",
+  "homepage": "https://github.com/devmehtaa/MusicApp#readme",
+  "bugs": {
+    "url": "https://github.com/devmehtaa/MusicApp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devmehtaa/MusicApp.git"
+  },
+  "license": "ISC",
+  "author": "Dev Mehta",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.0.0",
+    "nodemon": "^3.1.11"
+  }
+}

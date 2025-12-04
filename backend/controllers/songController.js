@@ -34,3 +34,23 @@ exports.searchSong = async (req, res) => {
     }
 };
 
+exports.createSong = async (req, res) => {
+    try {
+        const {title, artist, album, duration, coverImage, audioFile} = req.body;
+        if(!title || !artist || !audioFile){
+            return res.status(400).json({message: "title, artist or audio file not found"});
+        }
+        const newSong = await Song.create({
+            title: title,
+            artist: artist,
+            audioFile: audioFile,
+            album: album || "",
+            duration: duration || 0,
+            coverImage: coverImage || ""
+        });
+        res.status(201).json({ message: "Song created", song: newSong });
+    }catch(error){
+        res.status(500).json({error: error.message});
+    }
+}
+
